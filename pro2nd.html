@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="utf-8" />
+	<title>Math Time</title>
+	<script>window.onload = function uphigh() {	
+	document.getElementById("num1").innerHTML = parseInt(Math.floor((Math.random() * 10) + 1));
+	document.getElementById("num2").innerHTML = parseInt(Math.floor((Math.random() * 10) + 1));
+	
+}
+function uphigh() {	
+	document.getElementById("num1").innerHTML = parseInt(Math.floor((Math.random() * 10) + 1));
+	document.getElementById("num2").innerHTML = parseInt(Math.floor((Math.random() * 10) + 1));
+	
+}
+function math1() {
+	var num1=document.getElementById("num1").innerHTML;
+	var num2=document.getElementById("num2").innerHTML;
+	num1=parseInt(num1);
+	num2=parseInt(num2);
+	var num0 = num1 + num2;
+	var answer=document.getElementById("answer").value;
+	answer=parseFloat(answer);
+	
+	if (num0==answer){
+		var things = ['Way to Go!!!', 'Congratulations!!!', 'Correct!!!','Your Doing Great!!!'];
+		var thing = things[Math.floor(Math.random()*things.length)];
+		alert(thing);
+		uphigh();
+		document.getElementById("answer").value="";
+		document.getElementById("demo").innerHTML = "";
+		document.getElementById("demo1").innerHTML = "";
+		}
+	else{
+		alert ("Incorrect answer!! \nPlease Try Again");
+		document.getElementById("answer").value="";
+	}
+	
+	}
+	</script>
+		<link rel="icon" href="images/owl.jpg" type="image/x-icon"/>
+		<link rel="shortcut icon" href="images/owl.jpg" type="image/x-icon"/>
+	<style>
+		html
+			{
+				background-image:url("images/fourth.jpg");
+				background-size: 100%;
+				background-repeat: no-repeat;
+			}
+		a:hover
+			{
+				font-size: 35px;
+				color: red;
+			}
+		form
+			{
+				background-color: white;
+				width: 40%;
+				height: 25em
+			}
+		h1
+			{
+				border: 5px outset gray;
+				height: 15em;
+				width: 35%;
+				background-color: blue;
+				padding: 20px 12px;
+				text-align: center;
+				font-size: 25px;
+				
+			}
+		#word
+			{
+				font-size: 20px;
+			}
+		#teach
+			{
+				padding: 5px;
+			}
+		table
+			{
+				text-align: center;
+				font-size: 30px;
+				padding: 10em;
+				width: 100%;
+				margin: 4px;
+			}
+		table, td
+			{
+				border: 2px solid black;
+				border-collapse: collapse;
+			}
+		.box 
+			{
+				margin: 5%;
+				float: left;		
+			}
+		footer
+			{
+				clear: left;
+			}
+
+
+	</style>
+	</head>
+	
+	<body>
+	<form class="box">
+		<table>
+			<col style="width:20%">
+			<col style="width:20%">
+			<col style="width:20%">
+			<col style="width:20%">
+			<col style="width:20%">
+			<tr>
+				<td>*<br>1</td>
+				<td>**<br>2</td>
+				<td>***<br>3</td>
+				<td>****<br>4</td>
+				<td>*****<br>5</td>
+			</tr>
+		</table>
+		<table>
+			<col style="width:20%">
+			<col style="width:20%">
+			<col style="width:20%">
+			<col style="width:20%">
+			<col style="width:20%">
+			<tr>
+				<td>*****<br>*<br>6</td>
+				<td>*****<br>**<br>7</td>
+				<td>*****<br>***<br>8</td>
+				<td>*****<br>****<br>9</td>
+				<td>*****<br>*****<br>10</td>
+			</tr>
+		</table>
+			<p id= "teach">Look at the chart above. These are the numbers we will be learning with today. As you can
+			see, each number has a set of star above them. When adding numbers together, we must count
+			all the numbers together. That is what this level will teach. By pressing the Add buttons, you will see stars
+			appear. Look at the numbers that come up, and try to put the same amount of stars on each side of the plus sign.
+			Then you can count all the stars that you see and put that answer in the box. If you make a mistake, just press the Reset Stars
+			button. Good Luck, and have fun.</p>
+		
+		
+	</form>
+	<h1 class="box">
+		<p id="word">
+			Please Answer these Sample Problems
+		</p><br>
+		<button id="myBtn">Add a Star to box 1</button><button id="myBtn1">Add a Star to box 2</button><br>
+
+		<span id="demo"></span>+<span id="demo1"></span><br>
+		<script>
+		document.getElementById("myBtn").addEventListener("click", function(){
+    document.getElementById("demo").innerHTML += "*";
+});
+document.getElementById("myBtn1").addEventListener("click", function(){
+    document.getElementById("demo1").innerHTML += "*";
+});
+		
+		</script>
+		
+		<button id="set">Reset Stars</button><br>
+		<script>
+		document.getElementById("set").addEventListener("click", function(){
+    document.getElementById("demo").innerHTML = "";
+});
+		document.getElementById("set").addEventListener("click", function(){
+    document.getElementById("demo1").innerHTML = "";
+});
+		</script><br>
+		<span id="num1"></span>
+		+ <span id="num2"></span> =
+		<input id="answer" type="text" size="3"/>
+		<button onclick = "math1()">Check</button> 
+	</h1>
+	</body>
+	<footer>
+	<a href="final pro.html">Back to Main Menu</a>
+	</footer>
+</html>
